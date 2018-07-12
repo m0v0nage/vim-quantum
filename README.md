@@ -1,55 +1,57 @@
 # Quantum
-A Vim color scheme based on the [Material Design palette](https://material.google.com/style/color.html#color-color-palette).
+
+A color scheme based on Google's [Material Design palette](https://material.io/guidelines/style/color.html#color-color-palette).
+
+> **NOTE:** Quantum requires a terminal or GUI that supports true-colors!
 
 ##### Quantum
-![quantum](http://i.imgur.com/9PV97Hx.png)
+![quantum](https://i.imgur.com/gdWhDrA.png)
 
 ##### Quantum Black
-![quantum-black](http://i.imgur.com/yk961KH.png)
+![quantum-black](https://i.imgur.com/VzPs0Uf.png)
 
 ### Installation
-Install manually by downloading this theme to `~/.vim/colors` or use a plugin manager.
 
-Then add the following to your `.vimrc` or `init.vim`:
+Install this color scheme using your preferred Vim plugin manager, then add the
+following to your vim configuration file:
+
 ```vim
 set background=dark
+set termguicolors
 colorscheme quantum
 ```
 
-If your terminal supports true colors, add:
-###### For Vim 8.0+ and Neovim 0.1.5+
-```vim
-if has("termguicolors")
-    set termguicolors
-endif
-```
-
-###### For Neovim 0.1.3 and 0.1.4
-```vim
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-```
-
 ### Options
-To set the included [Airline](https://github.com/vim-airline/vim-airline) theme:
+
+> **NOTE:** Configure all options *before* setting `colorscheme`!
+
+To swap the default background colors with blacker ones:
+```vim
+let g:quantum_black=1
+colorscheme quantum
+```
+
+To italicize the comments:
+```vim
+let g:quantum_italics=1
+```
+
+### Status Bar Support
+
+Quantum has themes for both [vim-airline](https://github.com/vim-airline/vim-airline) as well
+as [lightline](https://github.com/itchyny/lightline.vim).
+
+Install the statusbar plugin of your choice then set the theme in your
+vim config:
+
+Airline:
 ```vim
 let g:airline_theme='quantum'
 ```
 
-To enable the darker background setting:
+Lightline:
 ```vim
-let g:quantum_black = 1
+let g:lightline = {
+      \ 'colorscheme': 'quantum',
+      \ }
 ```
-
-If your terminal supports italics, add:
-```vim
-let g:quantum_italics = 1
-```
-
-### TODO: Features & Improvments
-- [x] Terminal themes (iTerm, Xresources, Terminal.app)
-- [ ] Improve language specific highlighting
-- [ ] Support for various plugins
-- [ ] Dark cursorline option
-
----
-Copyright © 2016 Brandon Siders. Released under the MIT License.
