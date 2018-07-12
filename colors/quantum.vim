@@ -108,6 +108,10 @@ call s:HL('Underlined',                     s:blue,     '',         'none')
 call s:HL('Error',                          s:red,      s:gray1,    'bold')
 call s:HL('Todo',                           s:orange,   s:gray1,    'bold')
 
+" CSharp
+call s:HL('csIface',						s:blue,		'', 		'')
+call s:HL('csClass',						s:blue,		'', 		'')
+
 " CSS
 call s:HL('cssAttrComma',                   s:gray5,    '',         '')
 call s:HL('cssPseudoClassId',               s:yellow,   '',         '')
